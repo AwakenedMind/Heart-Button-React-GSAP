@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem #eb358a;
+}
+
+.cupid {
+  height: 64px;
+  width: 64px;
+}
+
+.counter {
+  font-size: 3em;
+}
+
+body {
+  background-color: #7f5a83;
+  background-image: linear-gradient(135deg, #7f5a83 0%, #0d324d 74%);
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  color: white;
+}
