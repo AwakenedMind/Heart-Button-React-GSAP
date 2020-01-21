@@ -3,38 +3,56 @@
   text-align: center;
 }
 
-.button {
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-
-  border-radius: 1rem;
-  box-shadow: 0 0 0.5rem #eb358a;
+.btn {
+  display: flex;
+  align-items: baseline;
 }
 
-.cupid {
-  height: 64px;
-  width: 64px;
-}
-
-.counter {
-  font-size: 3em;
-}
-
-body {
-  background-color: #7f5a83;
-  background-image: linear-gradient(135deg, #7f5a83 0%, #0d324d 74%);
-  height: 100vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  color: white;
-}
-
-.heart-icon {
+button {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  padding: 5px 50px;
+  border: 5px #eb358a solid;
+  box-shadow: 5px 10px #888888;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translate(-40%, -50%);
+}
+
+.cupid-icon {
+  width: 50px;
+  position: relative;
+  right: 40px;
+  top: 10px;
+}
+
+.clicky {
+  position: relative;
+  left: 70px;
+  bottom: 35px;
+  font-size: 1.25rem;
+}
+
+.heart-icon {
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+  opacity: 0;
+  height: 32px;
+}
+
+#Layer_1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  margin: 0 auto;
 }

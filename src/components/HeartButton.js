@@ -1,24 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactComponent } from "../images/cupid.svg";
-import Heart from "./Heart";
+import { ReactComponent as Heart } from "../images/heart.svg";
+import gsap from "gsap";
 
 const HeartButton = ({ count, incrementCount }) => {
-  const [isClicked, setIsClicked] = React.useState(false);
+  // let HeartDiv = React.useRef(null);
+  const [tl] = useState(gsap.timeline({ paused: true }));
 
   const handleClick = () => {
-    // code here to update our isClick state
-    setIsClicked(!isClicked);
+    // gsap.to("#Layer_1", {
+    //   duration: 1.5,
+    //   ease: "slow(0.7, 0.7, false)",
+    //   opacity: 1,
+    //   y: -150
+    // });
 
-    //update state in App
+    tl.("#Layer_1", {
+      duration: 1.5,
+      ease: "slow(0.7, 0.7, false)",
+      opacity: 1,
+      y: -150
+    });
+
+    //update state in app
     incrementCount();
   };
 
+  // useEffect(() => {}, []);
+
   return (
-    <div>
-      <button className="button" onClick={handleClick}>
-        <ReactComponent alt={"cupid heart"} className="cupid" />
-        <Heart isClicked={isClicked} />
-        <div className="counter">{count}</div>
+    <div className="container">
+      <button className="btn" onClick={handleClick}>
+        <div className="cupid-icon">
+          <ReactComponent alt={"cupid"} />
+          <Heart className="heart-icon" />
+          <div className="clicky">{count}</div>
+        </div>
       </button>
     </div>
   );
